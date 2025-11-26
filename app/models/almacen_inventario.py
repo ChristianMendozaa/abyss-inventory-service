@@ -1,5 +1,5 @@
 # app/models/almacen_inventario.py
-from sqlalchemy import Column, Integer, DateTime, ForeignKey, func
+from sqlalchemy import Column, Integer, DateTime, func
 from app.database import Base
 
 
@@ -8,12 +8,10 @@ class AlmacenInventario(Base):
 
     productos_id_producto = Column(
         Integer,
-        ForeignKey("productos.id_producto"),
         primary_key=True,
     )
     almacenes_id_almacen = Column(
         Integer,
-        ForeignKey("almacenes.id_almacen"),
         primary_key=True,
     )
 
